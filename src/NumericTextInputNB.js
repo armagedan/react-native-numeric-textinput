@@ -3,6 +3,7 @@
 import React, { PureComponent } from 'react';
 import { TextInput } from 'react-native';
 import { code } from 'currency-codes';
+import { Input } from 'native-base';
 
 // Polyfill for Intl until properly supported in Android
 import 'intl';
@@ -100,7 +101,7 @@ class NumericTextInput extends PureComponent<Props> {
     const { onUpdate, value, ...textInputProps } = this.props;
 
     return (
-      <TextInput
+      <Input
         {...textInputProps}
         value={this.formatNumberValue(value, this.formatConfig)}
         keyboardType="number-pad"
